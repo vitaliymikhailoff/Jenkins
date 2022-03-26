@@ -15,7 +15,7 @@
        shell: hostname
        register: name
        
-     - name: Output
+     - name: Output1
        debug:
          var: ping
    
