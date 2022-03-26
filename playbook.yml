@@ -9,9 +9,16 @@
 
      - name: Test
        shell: ping -c 5 8.8.8.8
+       register: ping
        
      - name: Who
        shell: hostname
-      
-
+       register: name
+       
+     - name: Output
+       debug:
+         var: ping
    
+     - name: Output2
+       debug:
+         var: name
